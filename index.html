@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Chip8 Emulator</title>
+        <script src="chip8.js"></script>
+        <script src="renderer.js"></script>
+        <script>
+            var running = false;
+            var chip8= new Chip8();
+        </script>
+    </head>
+    <body>
+        <canvas id="gameCanvas" width="640" height="320" style="border:1px solid #000000;">
+        </canvas>
+        <button onclick="running = false; setTimeout(function(){chip8.Load(document.getElementById('gamelist').value)}, 100); ">Load Game</button>
+        <select id="gamelist">
+            <option value ="PONG">PONG</option>
+            <option value ="15PUZZLE">15PUZZLE</option>
+            <option value ="BLINKY">BLINKY</option>
+            <option value ="BLITZ">BLITZ</option>
+            <option value ="BRIX">BRIX</option>
+            <option value ="CONNECT4">CONNECT4</option>
+            <option value ="GUESS">GUESS</option>
+            <option value ="HIDDEN">HIDDEN</option>
+            <option value ="INVADERS">INVADERS</option>
+            <option value ="KALEID">KALEID</option>
+            <option value ="MAZE">MAZE</option>
+            <option value ="MERLIN">MERLIN</option>
+            <option value ="MISSLE">MISSLE</option>
+            <option value ="PONG2">PONG2</option>
+            <option value ="PUZZLE">PUZZEL</option>
+            <option value ="SYZYGY">SYZYGY</option>
+            <option value ="TANK">TANK</option>
+            <option value ="TETRIS">TETRIS</option>
+            <option value ="TICTAC">TICTAC</option>
+            <option value ="UFO">UFO</option>
+            <option value ="VBRIX">VBRIX</option>
+            <option value ="VERS">VERS</option>
+            <option value ="WIPEOFF">WIPEOFF</option>
+        </select> 
+
+    </body>
+</html>
