@@ -55,7 +55,7 @@ class Chip8 {
     Load(game) {
         this.reset();
         let r = new XMLHttpRequest();
-        r.open("GET", "/games/" + game, true);
+        r.open("GET", "/Chip8-js/games/" + game, true);
         r.responseType = "arraybuffer";
 
         r.onload = function (event) {
